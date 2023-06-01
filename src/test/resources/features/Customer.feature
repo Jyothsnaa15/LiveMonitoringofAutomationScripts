@@ -7,12 +7,12 @@ Feature: Person API
     Then the response status code should be "201"
 
   Scenario: Get a person by ID
-    Given there is a person with ID 1
+    Given there is a person with ID 3
     When I request the person by ID
     #Then the response status code should be "200"
     Then the response should contain the following details
-   | id | name | age | location  |
-   | 1  | Jyo    | 21  | Bangalore |
+      | id | name | age | location  |
+      | 3  | Jyo  | 21  | Bangalore |
 
   Scenario: Retrieve all persons
     Given there are some persons in the system
